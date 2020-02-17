@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+    <h1>WANNA KNOW YOUR BIRTHDAY</h1>
+    <h2>EASY...</h2>
+
+    
+</head>
+<body style="background-image: url(hbd2.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    <label for="birthday">Birthday</label>
+            <input type="date" id="birthday">
+
+        <select>
+            <option onclick="maletabclicked();">malename</option>
+            <option onclick="femaletabclicked();">femalename</option>
+        </select>
+    <button type="button" onclick="genderclicked();">Submit</button>
+
+
+    <script>
+        
+        var malename= ["kwasi", "kwadwo", "kwabena", "kwaku", "yaw", "kofi", "kwame"];
+        var femalename= ["akosua", "adowa", "abenaa", "akua", "yaa", "afua", "ama"];
+        var represent;
+        var maleoutput;
+        var femaleoutput;
+        var clicked;
+        var clickedd;
+
+        function getInputvalue(){
+            var birthdaydate = new Date(document.getElementById("birthday").value);
+            represent = birthdaydate.getday();
+        }
+        function genderclicked(){
+            getInputvalue();
+            if(clicked===true){
+                maleoutput=malename[represent];
+                alert(maleoutput);
+            }else if(clicked===false){
+                clickedd === true;
+            }else if(clickedd===true){
+                femaleoutput = femalename[represent];
+                alert(femaleoutput);
+            }else{
+                clicked === true;
+            }
+        }
+        function maletabclicked(){
+            clicked=true;
+        }
+        function femaletabclicked(){
+            clickedd=true;
+        }
+    </script>
+</body>
+</html>
